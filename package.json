@@ -1,0 +1,38 @@
+{
+  "name": "rdf-examples",
+  "version": "0.9.0",
+  "description": "Examples for RDFJS Interfaces",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rdf-ext/rdf-examples.git"
+  },
+  "keywords": [
+    "rdf",
+    "rdfjs",
+    "rdf-ext",
+    "stream",
+    "examples"
+  ],
+  "author": "Thomas Bergwinkl <bergi@axolotlfarm.org> (https://www.bergnet.org/people/bergi/card#me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rdf-ext/rdf-examples/issues"
+  },
+  "homepage": "https://github.com/rdf-ext/rdf-examples",
+  "dependencies": {
+    "rdf-data-model": "git://github.com/rdf-ext/rdf-data-mode.git#v1",
+    "rdf-parser-jsonld": "git://github.com/rdf-ext/rdf-parser-jsonld.git#v1",
+    "rdf-serializer-ntriples": "git://github.com/rdf-ext/rdf-serializer-ntriples.git#v1",
+    "string-to-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "standard": "^7.0.1"
+  },
+  "readmeFilename": "README.md"
+}
