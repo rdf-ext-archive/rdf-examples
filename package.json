@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/rdf-ext/rdf-examples",
   "dependencies": {
-    "rdf-data-model": "git://github.com/rdf-ext/rdf-data-mode.git#v1",
+    "rdf-data-model": "git://github.com/rdf-ext/rdf-data-model.git#v1",
     "rdf-ext": "git://github.com/rdf-ext/rdf-ext.git#v1",
     "rdf-parser-jsonld": "git://github.com/rdf-ext/rdf-parser-jsonld.git#v1",
     "rdf-serializer-ntriples": "git://github.com/rdf-ext/rdf-serializer-ntriples.git#v1",
