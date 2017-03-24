@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard",
-    "test": "mocha"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -25,15 +25,15 @@
   },
   "homepage": "https://github.com/rdf-ext/rdf-examples",
   "dependencies": {
-    "rdf-data-model": "git://github.com/rdf-ext/rdf-data-model.git#v1",
-    "rdf-ext": "git://github.com/rdf-ext/rdf-ext.git#v1",
-    "rdf-parser-jsonld": "git://github.com/rdf-ext/rdf-parser-jsonld.git#v1",
-    "rdf-serializer-ntriples": "git://github.com/rdf-ext/rdf-serializer-ntriples.git#v1",
+    "rdf-ext": "git://github.com/rdf-ext/rdf-ext.git#develop",
+    "rdf-parser-jsonld": "git://github.com/rdf-ext/rdf-parser-jsonld.git#develop",
+    "rdf-parser-n3": "git://github.com/rdf-ext/rdf-parser-n3.git#develop",
+    "rdf-serializer-jsonld": "git://github.com/rdf-ext/rdf-serializer-jsonld.git#develop",
+    "rdf-serializer-ntriples": "git://github.com/rdf-ext/rdf-serializer-ntriples.git#develop",
     "string-to-stream": "^1.1.0"
   },
   "devDependencies": {
-    "mocha": "^2.4.5",
-    "standard": "^7.0.1"
+    "standard": "^9.0.2"
   },
   "readmeFilename": "README.md"
 }
