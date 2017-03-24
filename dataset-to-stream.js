@@ -1,5 +1,3 @@
-'use strict'
-
 const rdf = require('rdf-ext')
 
 // create a new dataset using the rdf-ext factory
