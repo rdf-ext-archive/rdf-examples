@@ -26,10 +26,12 @@
   "homepage": "https://github.com/rdf-ext/rdf-examples",
   "dependencies": {
     "rdf-ext": "git://github.com/rdf-ext/rdf-ext.git#develop",
+    "rdf-fetch": "git://github.com/rdf-ext/rdf-fetch.git#develop",
     "rdf-parser-jsonld": "git://github.com/rdf-ext/rdf-parser-jsonld.git#develop",
     "rdf-parser-n3": "git://github.com/rdf-ext/rdf-parser-n3.git#develop",
     "rdf-serializer-jsonld": "git://github.com/rdf-ext/rdf-serializer-jsonld.git#develop",
     "rdf-serializer-ntriples": "git://github.com/rdf-ext/rdf-serializer-ntriples.git#develop",
+    "rdf-store-sparql": "git://github.com/rdf-ext/rdf-store-sparql.git#develop",
     "string-to-stream": "^1.1.0"
   },
   "devDependencies": {
