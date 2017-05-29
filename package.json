@@ -30,8 +30,10 @@
     "rdf-parser-jsonld": "git://github.com/rdf-ext/rdf-parser-jsonld.git#develop",
     "rdf-parser-n3": "git://github.com/rdf-ext/rdf-parser-n3.git#develop",
     "rdf-serializer-jsonld": "git://github.com/rdf-ext/rdf-serializer-jsonld.git#develop",
+    "rdf-serializer-jsonld-ext": "git://github.com/rdf-ext/rdf-serializer-jsonld-ext.git#develop",
     "rdf-serializer-ntriples": "git://github.com/rdf-ext/rdf-serializer-ntriples.git#develop",
     "rdf-store-sparql": "git://github.com/rdf-ext/rdf-store-sparql.git#develop",
+    "readable-stream": "^2.2.9",
     "string-to-stream": "^1.1.0"
   },
   "devDependencies": {
