@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SPARQL Store example</title>
+</head>
+
+<body>
+  <textarea id="console" cols="100" rows="20"></textarea>
+
+  <script src="support/console.js"></script>
+  <script src="http://rdf-ext.bergnet.org/dist/rdf-ext-all-1.0.0.src.js"></script>
+
+  <script>
+
+  // create a new SPARQL store instance pointing to the dbpedia endpoint
+  const store = new SparqlStore({
+    factory: rdf,
+    endpointUrl: 'https://dbpedia.org/sparql'
+  })
+
+  // fetch all triples for the Eiffel Tower subject and opening date predicate
+  const stream = store.match(
+    rdf.namedNode('http://dbpedia.org/resource/Eiffel_Tower'),
+    rdf.namedNode('http://dbpedia.org/ontology/openingDate')
+  )
+
+  // forward errors to the console
+  stream.on('error', (err) => {
+    console.error(err.stack || err.message)
+  })
+
+  // write the object value of the matching triple to the console
+  stream.on('data', (quad) => {
+    console.log('The Eiffel Tower opened on: ' + quad.object.value)
+  })
+
+  </script>
+</body>
+</html>
