@@ -33,7 +33,7 @@
     "rdf-serializer-jsonld-ext": "git://github.com/rdf-ext/rdf-serializer-jsonld-ext.git#develop",
     "rdf-serializer-ntriples": "git://github.com/rdf-ext/rdf-serializer-ntriples.git#develop",
     "rdf-store-sparql": "git://github.com/rdf-ext/rdf-store-sparql.git#develop",
-    "readable-stream": "^2.2.9",
+    "readable-stream": "^2.3.3",
     "string-to-stream": "^1.1.0"
   },
   "devDependencies": {
