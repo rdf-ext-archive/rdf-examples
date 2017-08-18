@@ -16,6 +16,6 @@ let quadStream = parser.import(stringToStream(JSON.stringify(example)))
 rdf.dataset().import(quadStream).then((dataset) => {
   // loop over all quads an write them to the console
   dataset.forEach((quad) => {
-    console.log(quad.toCanonical())
+    console.log(quad)
   })
 })
