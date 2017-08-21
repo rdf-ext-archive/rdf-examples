@@ -7,7 +7,7 @@ let example = {
 }
 
 // create JSON-LD parser instance
-let parser = new JsonLdParser()
+let parser = new JsonLdParser({factory: rdf})
 
 // forward the JSON-LD example string to the parser
 let quadStream = parser.import(stringToStream(JSON.stringify(example)))
@@ -16,6 +16,6 @@ let quadStream = parser.import(stringToStream(JSON.stringify(example)))
 rdf.dataset().import(quadStream).then((dataset) => {
   // loop over all quads an write them to the console
   dataset.forEach((quad) => {
-    console.log(quad)
+    console.log(quad.toString())
   })
 })
