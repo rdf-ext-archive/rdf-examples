@@ -13,26 +13,22 @@
 
   <script>
 
-  // create a new SPARQL store instance pointing to the dbpedia endpoint
-  const store = new SparqlStore({
-    factory: rdf,
-    endpointUrl: 'https://dbpedia.org/sparql'
-  })
+  const example = {
+    'http://example.org/predicate': ['object1', 'object2']
+  }
 
-  // fetch all triples for the Eiffel Tower subject and opening date predicate
-  const stream = store.match(
-    rdf.namedNode('http://dbpedia.org/resource/Eiffel_Tower'),
-    rdf.namedNode('http://dbpedia.org/ontology/openingDate')
-  )
+  // create JSON-LD parser instance
+  const parser = new JsonLdParser({factory: rdf})
 
-  // forward errors to the console
-  stream.on('error', (err) => {
-    console.error(err.stack || err.message)
-  })
+  // forward the JSON-LD example string to the parser
+  const quadStream = parser.import(stringToStream(JSON.stringify(example)))
 
-  // write the object value of the matching triple to the console
-  stream.on('data', (quad) => {
-    console.log('The Eiffel Tower opened on: ' + quad.object.value)
+  // create a new dataset and import the quad stream into it (reverse pipe) with Promise API
+  rdf.dataset().import(quadStream).then((dataset) => {
+    // loop over all quads an write them to the console
+    dataset.forEach((quad) => {
+      console.log(quad.toString())
+    })
   })
 
   </script>
