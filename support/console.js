@@ -1,16 +1,7 @@
-function escapeHtml (str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;')
-}
-
 function appendText (str) {
   var element = document.getElementById('console');
 
-  element.value = element.value + escapeHtml(str) + '\n';
+  element.value = element.value + str + '\n';
   element.scrollTop = element.scrollHeight;
 }
 
