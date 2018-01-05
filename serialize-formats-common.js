@@ -1,6 +1,5 @@
 const rdf = require('rdf-ext')
 const formats = require('rdf-formats-common')()
-console.log('Normal: ', JSON.stringify(formats, undefined, 2));
 const Readable = require('readable-stream')
 
 // create a prefix map and fill it
