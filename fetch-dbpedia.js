@@ -33,10 +33,10 @@ rdfFetch('http://dbpedia.org/resource/Eiffel_Tower', {formats: formats}).then((r
 rdfFetch('http://dbpedia.org/resource/Eiffel_Tower', {formats: formats}).then((res) => {
   return res.quadStream()
 }).then((stream) => {
-  let filterStream = stream.match(null, rdf.namedNode('http://dbpedia.org/ontology/openingDate'))
-
-  filterStream.on('data', (quad) => {
-    console.log('The Eiffel Tower opened on: ' + quad.object.value)
+  stream.on('data', (quad) => {
+    if (quad.predicate.equals(rdf.namedNode('http://dbpedia.org/ontology/openingDate'))) {
+      console.log('The Eiffel Tower opened on: ' + quad.object.value)
+    }
   })
 
   return rdf.waitFor(stream)
