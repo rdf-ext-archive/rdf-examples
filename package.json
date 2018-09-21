@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/rdf-ext/rdf-examples",
   "dependencies": {
+    "@rdfjs/data-model": "github:rdfjs/data-model",
+    "@rdfjs/serializer-ntriples": "github:rdfjs/serializer-ntriples",
     "rdf-ext": "^1.1.0",
     "rdf-fetch": "^1.0.0",
     "rdf-fetch-lite": "^1.0.0",
