@@ -27,7 +27,7 @@
   "dependencies": {
     "@rdfjs/data-model": "github:rdfjs/data-model",
     "@rdfjs/serializer-ntriples": "github:rdfjs/serializer-ntriples",
-    "rdf-ext": "^1.1.0",
+    "rdf-ext": "^1.1.1",
     "rdf-fetch": "^1.0.0",
     "rdf-fetch-lite": "^1.0.0",
     "rdf-parser-jsonld": "^1.0.1",
@@ -35,7 +35,8 @@
     "rdf-serializer-jsonld": "^1.0.0",
     "rdf-serializer-jsonld-ext": "^1.2.0",
     "rdf-serializer-ntriples": "^1.0.0",
-    "rdf-store-sparql": "^1.0.0",
+    "rdf-store-dataset": "^1.0.0",
+    "rdf-store-sparql": "^2.0.0",
     "readable-stream": "^2.3.3",
     "string-to-stream": "^1.1.0",
     "tbbt-ld": "^1.0.0"

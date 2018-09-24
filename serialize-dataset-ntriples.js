@@ -15,7 +15,6 @@ dataset.add(rdf.quad(bnode, rdf.namedNode('http://schema.org/addressRegion'), rd
 dataset.add(rdf.quad(bnode, rdf.namedNode('http://schema.org/postalCode'), rdf.literal('91104')))
 dataset.add(rdf.quad(bnode, rdf.namedNode('http://schema.org/streetAddress'), rdf.literal('2311 North Los Robles Avenue, Aparment 4A')))
 
-
 const serializerNtriples = new SerializerNtriples()
 const input = dataset.toStream()
 const output = serializerNtriples.import(input)

@@ -9,5 +9,3 @@ let quad = rdf.quad(subject, predicate, object)
 // log the triples to console with toString()
 // note that this is N-Triples serialization by defiition
 console.log(quad.toString())
-
-
