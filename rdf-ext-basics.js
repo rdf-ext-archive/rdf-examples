@@ -1,6 +1,6 @@
 const rdf = require('rdf-ext')
 
-let subject = rdf.namedNode('http://example.org/subject') 
+let subject = rdf.namedNode('http://example.org/subject')
 let predicate = rdf.namedNode('http://example.org/predicate')
 let object = rdf.literal('object')
 

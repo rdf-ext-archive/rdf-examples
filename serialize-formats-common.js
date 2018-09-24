@@ -18,9 +18,8 @@ const quadStream = new Readable({
   read: () => {}
 })
 
-
-const serializerJsonLd = formats.serializers[ 'application/ld+json' ];
-const serializerTurtle = formats.serializers[ 'text/turtle' ];
+const serializerJsonLd = formats.serializers[ 'application/ld+json' ]
+const serializerTurtle = formats.serializers[ 'text/turtle' ]
 
 // forward the quads to the serializers
 const streamJsonLd = serializerJsonLd.import(quadStream)
@@ -37,19 +36,18 @@ prefixMap.export(quadStream)
 quadStream.push(quad)
 quadStream.push(null)
 
-
 // But if we want to configure a serializer differently than is defined in 'commons', then we need to overwrite the
 // instance created by default with our explicitly created and configured instance.
-const JsonLdSerializer = require('rdf-serializer-jsonld-ext');
-formats.serializers['application/ld+json'] = new JsonLdSerializer( { outputFormat: 'string', compact: true } );
+const JsonLdSerializer = require('rdf-serializer-jsonld-ext')
+formats.serializers['application/ld+json'] = new JsonLdSerializer({ outputFormat: 'string', compact: true })
 
 const quadStream2 = new Readable({
-    objectMode: true,
-    read: () => {}
+  objectMode: true,
+  read: () => {}
 })
 
-const serializerJsonLd2 = formats.serializers.find('application/ld+json');
-const streamJsonLd2 = serializerJsonLd2.import(quadStream2);
+const serializerJsonLd2 = formats.serializers.find('application/ld+json')
+const streamJsonLd2 = serializerJsonLd2.import(quadStream2)
 
 // pipe the serializer output to stdout (this time our JSON-LD should be compacted (e.g. the prefix 'ex' is mapped and
 // values use it, e.g. 'ex:subject' and 'ex:predicate').

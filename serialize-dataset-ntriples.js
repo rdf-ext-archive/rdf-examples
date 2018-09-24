@@ -1,5 +1,4 @@
 const rdf = require('rdf-ext')
-const Readable = require('stream').Readable
 const SerializerNtriples = require('@rdfjs/serializer-ntriples')
 
 // create a new dataset using the rdf-ext factory

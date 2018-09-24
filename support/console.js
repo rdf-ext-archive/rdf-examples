@@ -1,8 +1,8 @@
 function appendText (str) {
-  var element = document.getElementById('console');
+  var element = document.getElementById('console')
 
-  element.value = element.value + str + '\n';
-  element.scrollTop = element.scrollHeight;
+  element.value = element.value + str + '\n'
+  element.scrollTop = element.scrollHeight
 }
 
 console._error = console.error
